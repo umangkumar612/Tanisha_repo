@@ -33,9 +33,9 @@ export default function Quiz() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-500 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-green-500 mx-auto mb-4"></div>
           <h2 className="text-xl font-semibold text-gray-700">Loading Quiz...</h2>
           <p className="text-gray-500 mt-2">Preparing your questions</p>
         </div>
@@ -45,7 +45,7 @@ export default function Quiz() {
 
   if (error && questions.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 flex items-center justify-center">
         <div className="text-center bg-white rounded-2xl shadow-xl p-8">
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <span className="text-red-500 text-2xl">⚠️</span>
@@ -54,7 +54,7 @@ export default function Quiz() {
           <p className="text-gray-600 mb-6">{error}</p>
           <button
             onClick={initializeQuiz}
-            className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
           >
             <RotateCcw className="w-4 h-4" />
             Try Again
@@ -69,7 +69,7 @@ export default function Quiz() {
   const canGoNext = selectedAnswer.length > 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -120,7 +120,7 @@ export default function Quiz() {
             disabled={!canGoNext}
             className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all ${
               canGoNext
-                ? 'bg-blue-500 hover:bg-blue-600 text-white hover:scale-105 shadow-lg'
+                ? 'bg-green-500 hover:bg-green-600 text-white hover:scale-105 shadow-lg'
                 : 'bg-gray-200 text-gray-400 cursor-not-allowed'
             }`}
           >

@@ -21,7 +21,7 @@ export default function Question({
         {/* Question Header */}
         <div className="mb-6">
           <div className="flex items-center gap-3 mb-4">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
               {question.category}
             </span>
             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
@@ -54,7 +54,7 @@ export default function Question({
                 onClick={() => onAnswerSelect(option)}
                 className={`w-full p-4 rounded-xl border-2 text-left transition-all duration-200 group hover:scale-[1.02] ${
                   isSelected
-                    ? 'border-blue-500 bg-blue-50 shadow-md'
+                    ? 'border-green-500 bg-green-50 shadow-md'
                     : 'border-gray-200 bg-gray-50 hover:border-gray-300 hover:bg-gray-100'
                 }`}
                 aria-label={`Option ${optionLetter}: ${option}`}
@@ -62,7 +62,7 @@ export default function Question({
                 <div className="flex items-center gap-4">
                   <div className={`flex items-center justify-center w-8 h-8 rounded-full font-semibold text-sm transition-colors ${
                     isSelected 
-                      ? 'bg-blue-500 text-white' 
+                      ? 'bg-green-500 text-white' 
                       : 'bg-gray-200 text-gray-600 group-hover:bg-gray-300'
                   }`}>
                     {optionLetter}
